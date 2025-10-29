@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>順番待ちシステム</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="display.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="logo-area">
+            <div>
+                <div class="logo-title">音戯喫茶</div>
+                <div class="logo-subtitle">順番待ちシステム</div>
+            </div>
+        </div>
+        <div class="status-area">
+            <div id="current-time" class="time-display">15:05</div>
+            <div class="count-display">
+                順番待ち: <span id="waiting-count">0</span>組 | 呼び出し: <span id="ready-count">0</span>組
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="board" id="reception-board">
+            <div class="board-header">
+                <h2>順番待ち</h2>
+            </div>
+            <div class="number-grid" id="reception-numbers">
+                </div>
+            <div class="board-footer">
+                ちょっとまっててね
+            </div>
+        </div>
+        
+        <div class="board" id="calling-board">
+            <div class="board-header">
+                <h2>呼び出し</h2>
+            </div>
+            <div class="number-grid" id="calling-numbers">
+                </div>
+            <div class="board-footer">
+                カウンターまできてね
+            </div>
+        </div>
+    </main>
+
+    <script src="display.js"></script>
+</body>
+</html>

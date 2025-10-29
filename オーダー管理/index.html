@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>音戯喫茶注文フォーム</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>ご注文フォーム</h1>
+
+        <div id="menu-items">
+            <div class="menu-item">
+                <span class="item-name">ブラックコーヒー（アイス）</span>
+                <span class="item-price">200円</span>
+                <input type="number" class="item-quantity" id="black-coffee-ice-quantity" value="0" min="0" data-price="200">
+            </div>
+
+            <div class="menu-item">
+                <span class="item-name">ブラックコーヒー（ホット）</span>
+                <span class="item-price">200円</span>
+                <input type="number" class="item-quantity" id="black-coffee-hot-quantity" value="0" min="0" data-price="200">
+            </div>
+
+             <div class="menu-item">
+                <span class="item-name">カフェオレ（アイス）</span>
+                <span class="item-price">200円</span>
+                <input type="number" class="item-quantity" id="cafe-au-lait-ice-quantity" value="0" min="0" data-price="200">
+            </div>
+
+            <div class="menu-item">
+                <span class="item-name">カフェオレ（ホット）</span>
+                <span class="item-price">200円</span>
+                <input type="number" class="item-quantity" id="cafe-au-lait-hot-quantity" value="0" min="0" data-price="200">
+            </div>
+
+            <div class="menu-item">
+                <span class="item-name">カルピスソーダ</span>
+                <span class="item-price">200円</span>
+                <input type="number" class="item-quantity" id="calpis-soda-quantity" value="0" min="0" data-price="200">
+            </div>
+
+            <div class="menu-item">
+                <span class="item-name">フレンチトースト</span>
+                <span class="item-price">200円</span>
+                <input type="number" class="item-quantity" id="french-toast-quantity" value="0" min="0" data-price="200">
+            </div>
+
+            </div>
+
+        <div class="total-section">
+            <h2>合計金額</h2>
+            <p>¥ <span id="total-price">0</span></p>
+        </div>
+
+        <button id="submit-btn">注文を確定する</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

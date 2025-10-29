@@ -1,0 +1,160 @@
+/* ====== 基本設定 ====== */
+:root {
+    --main-bg: #fdfaf6;
+    --reception-bg: #fef7ec;
+    --calling-bg: #f6fbf8;
+    --header-bg: #7f3b12d8;
+    --main-text: #3d3d3d;
+    --accent-green: #28a745;
+    --accent-green-light: #eaf6ec;
+    --font-family: 'Noto Sans JP', sans-serif;
+}
+
+body {
+    background-color: var(--main-bg);
+    color: var(--main-text);
+    font-family: var(--font-family);
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* ====== ヘッダー ====== */
+.main-header {
+    background-color: var(--header-bg);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 40px;
+    flex-shrink: 0;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+}
+
+.logo-icon {
+    font-size: 2.5em;
+    margin-right: 15px;
+}
+
+.logo-title {
+    font-size: 3em;
+    font-weight: 700;
+}
+
+.logo-subtitle {
+    font-size: 0.9em;
+    opacity: 0.9;
+}
+
+.status-area {
+    text-align: right;
+}
+
+.time-display {
+    font-size: 5em;
+    font-weight: 700;
+}
+
+.count-display {
+    font-size: 1.5em;
+}
+
+/* ====== メインコンテンツ ====== */
+.container {
+    display: flex;
+    flex-grow: 1;
+    min-height: 0; /* flex-growを有効にするためのハック */
+}
+
+.board {
+    padding: 25px 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+#reception-board {
+    flex: 1; /* 左側の幅 */
+    background-color: var(--reception-bg);
+    border-right: 1px solid #ddd;
+}
+
+#calling-board {
+    flex: 1; /* 右側の幅 */
+    background-color: var(--calling-bg);
+}
+
+.board-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-shrink: 0;
+}
+
+.board-header .icon {
+    font-size: 1.8em;
+    margin-right: 10px;
+}
+
+.board-header h2 {
+    font-size: 3em;
+    margin: 0;
+    font-weight: 700;
+}
+
+#reception-board .board-header h2 {
+    color: #c95914; /* オレンジ系の色 */
+}
+
+#calling-board .board-header h2 {
+    color: var(--accent-green);
+}
+
+.number-grid {
+    flex-grow: 1;
+    overflow-y: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 20px;
+    padding: 10px 0;
+}
+
+.board-footer {
+    text-align: center;
+    padding-top: 20px;
+    color: #888;
+    flex-shrink: 0;
+    font-size: 1.5em;
+}
+
+/* ====== 番号札 ====== */
+.number-plate {
+    background-color: white;
+    border: 2px solid var(--accent-green-light);
+    border-radius: 12px;
+    padding: 15px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 16 / 10;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.plate-label {
+    font-size: 1em;
+    color: var(--accent-green);
+}
+
+.plate-number {
+    font-size: 4em;
+    font-weight: 700;
+    color: var(--accent-green);
+    line-height: 1.1;
+}
