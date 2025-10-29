@@ -1,5 +1,5 @@
 // ★★★ Google Apps ScriptのウェブアプリURLをここに貼り付け ★★★
-const GAS_URL = 'https://script.google.com/macros/s/AKfycbxRamBQnUleSiae863R6xnuZN47xHSzPHRdQFGpATYHIotM2X_bAuetF8AHda_Q3Hs/exec';
+const GAS_URL = 'gasのURLを貼る';
 
 // HTML要素をあらかじめ取得しておく
 const receptionNumbersDiv = document.getElementById('reception-numbers');
