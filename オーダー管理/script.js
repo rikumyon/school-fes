@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const quantityInputs = document.querySelectorAll('.item-quantity');
     const totalPriceElement = document.getElementById('total-price');
     const submitBtn = document.getElementById('submit-btn');
-    const GAS_URL = 'https://script.google.com/macros/s/AKfycbxRamBQnUleSiae863R6xnuZN47xHSzPHRdQFGpATYHIotM2X_bAuetF8AHda_Q3Hs/exec';
+    const GAS_URL = 'gasのURLを貼る';
 
     // 2. 合計金額を計算して表示する関数
     function updateTotalPrice() {
