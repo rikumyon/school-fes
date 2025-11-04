@@ -1,5 +1,5 @@
 // ★★★ Google Apps ScriptのウェブアプリURLをここに貼り付け ★★★
-const GAS_URL = 'gasのURLを貼る';
+const GAS_URL = 'https://script.google.com/macros/s/AKfycbyD0ckIJeqXrziordpk4iCYv5yctp33JXa_tQIzsC0JxD898RKDgnrpYiqQyaZFVhI/exec';
 
 // HTML要素をあらかじめ取得しておく
 const receptionNumbersDiv = document.getElementById('reception-numbers');
@@ -26,15 +26,14 @@ async function updateDisplay() {
             readyCountSpan.textContent = data.calling.length;
 
             // 「呼び出し中」の番号を描画
-            data.calling.forEach(number => {
-                const plate = createNumberPlate(number);
+            data.calling.forEach(artistName => {
+                const plate = createArtistPlate(artistName);
                 callingNumbersDiv.appendChild(plate);
             });
 
             // 「受付中」の番号を描画
-            data.reception.forEach(number => {
-                // 受付中の番号札は右側と同じデザインなので、同じ関数を呼び出す
-                const plate = createNumberPlate(number);
+            data.reception.forEach(artistName => {
+                const plate = createArtistPlate(artistName);
                 receptionNumbersDiv.appendChild(plate);
             });
         } else {
@@ -45,22 +44,11 @@ async function updateDisplay() {
     }
 }
 
-// 番号札のHTML要素を作成する関数（デザインに合わせて変更）
-function createNumberPlate(number) {
+// アーティスト名の番号札を作成する関数
+function createArtistPlate(name) {
     const div = document.createElement('div');
-    div.className = 'number-plate';
-
-    const label = document.createElement('span');
-    label.className = 'plate-label';
-    label.textContent = 'No.';
-    
-    const numSpan = document.createElement('span');
-    numSpan.className = 'plate-number';
-    // 番号を3桁のゼロ埋めにする
-    numSpan.textContent = String(number).padStart(3, '0');
-
-    div.appendChild(label);
-    div.appendChild(numSpan);
+    div.className = 'artist-plate'; 
+    div.textContent = name;
     return div;
 }
 

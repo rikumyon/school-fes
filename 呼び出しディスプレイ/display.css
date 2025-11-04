@@ -2,8 +2,8 @@
 :root {
     --main-bg: #fdfaf6;
     --reception-bg: #fef7ec;
-    --calling-bg: #f6fbf8;
-    --header-bg: #7f3b12d8;
+    --calling-bg: hsl(144, 38%, 97%);
+    --header-bg: #c8682dd8;
     --main-text: #3d3d3d;
     --accent-green: #28a745;
     --accent-green-light: #eaf6ec;
@@ -28,7 +28,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 50px 40px;
+    padding: 10px 40px;
     flex-shrink: 0;
 }
 
@@ -69,7 +69,7 @@ body {
 .container {
     display: flex;
     flex-grow: 1;
-    min-height: 0; /* flex-growを有効にするためのハック */
+    min-height: 0; 
 }
 
 .board {
@@ -108,7 +108,7 @@ body {
 }
 
 #reception-board .board-header h2 {
-    color: #c95914; /* オレンジ系の色 */
+    color: #f60000; 
 }
 
 #calling-board .board-header h2 {
@@ -119,9 +119,11 @@ body {
     flex-grow: 1;
     overflow-y: auto;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-    gap: 20px;
-    padding: 10px 0;
+    grid-template-columns: repeat(auto-fill, 220px);
+    grid-auto-rows: 90px; /* 行の高さをカード高さに合わせる */
+    justify-content: center;
+    gap: 54px 48px;
+    padding: 16px 0;
 }
 
 .board-footer {
@@ -132,29 +134,26 @@ body {
     font-size: 1.5em;
 }
 
-/* ====== 番号札 ====== */
-.number-plate {
+/* ====== アーティスト札のスタイル ====== */
+.artist-plate {
     background-color: white;
     border: 2px solid var(--accent-green-light);
     border-radius: 12px;
     padding: 15px;
     text-align: center;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    aspect-ratio: 16 / 10;
     box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-}
+    
+    height: 100px;
+    width: 220px;
+    
 
-.plate-label {
-    font-size: 1em;
-    color: var(--accent-green);
-}
+    overflow-wrap: break-word;
 
-.plate-number {
-    font-size: 4em;
+    font-size: 2.5em;
     font-weight: 700;
     color: var(--accent-green);
-    line-height: 1.1;
+    line-height: 1.3;
 }
