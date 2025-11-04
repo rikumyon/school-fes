@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const submitBtn = document.getElementById('submit-btn');
     
     // ★★★ GASのウェブアプリURLをここに貼り付けてください ★★★
-    const GAS_URL = 'https://script.google.com/macros/s/AKfycbyD0ckIJeqXrziordpk4iCYv5yctp33JXa_tQIzsC0JxD898RKDgnrpYiqQyaZFVhI/exec'; // あなたのURLに書き換えてください
+    const GAS_URL = 'GASのURLを貼り付ける'; 
 
     function updateTotalPrice() {
         let total = 0;
